@@ -1,12 +1,21 @@
 "use strict"; 
-//const res = confirm("ffff");
-const sss = prompt("djfvkjn","qwerty");
-console.log(sss);
+let numberOfFilms = +prompt("Сколько фильмов Вы посмотрели?",'');
+console.log(numberOfFilms);
 
-const answer = [];
-answer[0] = prompt("1");
-answer[1] = prompt("21");
-console.log(answer);
+const personMoveBD = {
+    count: numberOfFilms, 
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-document.write(answer);
- 
+const a = prompt("Последний фильм?");
+const b = prompt("на сколько его оцените?");
+const c = prompt("Последний фильм?");
+const d = prompt("на сколько его оцените?");
+
+personMoveBD.movies[a] = b;
+personMoveBD.movies[c]=d;
+
+console.log(personMoveBD);
