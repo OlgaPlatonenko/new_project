@@ -10,12 +10,22 @@ const personMoveBD = {
     privat: false
 };
 
-const a = prompt("Последний фильм?");
-const b = prompt("на сколько его оцените?");
-const c = prompt("Последний фильм?");
-const d = prompt("на сколько его оцените?");
 
-personMoveBD.movies[a] = b;
-personMoveBD.movies[c]=d;
+for (let i=0;i<2;i++){  
+    const a = prompt("последний фильм?"),
+          b = prompt("на сколько его оцените?");    
+    if (a != null && b != null && a != '' && b != '' && a.length <50 ){
+        personMoveBD.movies[a] = b;
+        console.log('done');
+    } else 
+    {
+        console.log('err');
+        i--;
+    }
+
+  
+}
+
+
 
 console.log(personMoveBD);
